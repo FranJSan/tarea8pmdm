@@ -96,8 +96,9 @@ public class WebViewFragment extends Fragment {
     }
 
     /**
-     * Método que devuelve la Url introducida por el usuario con un formato válido.
-     * @return
+     * Método que devuelve la Url introducida por el usuario con un formato válido. Comprueba si
+     * la url contiene el prefijo 'http' y lo agrega si es necesario.
+     * @return url formateada
      */
     private String getFormatUrl() {
         String urlInput = etInput.getText().toString();
