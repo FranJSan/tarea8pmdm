@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackMain"
+    android:background="@color/colorTb"
     tools:context=".CalculadoraFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -20,7 +20,7 @@
         android:textColor="@color/colorBtnTextNumbers"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gridL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/gridL"
@@ -73,6 +73,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:textColor="@color/coloBtnOper"
             android:id="@+id/btnMas"
             android:layout_row="0"
             android:layout_margin="3dp"
@@ -122,6 +123,7 @@
             android:layout_margin="3dp"
             android:layout_column="3"
             android:backgroundTint="@color/colorBtnPrimary"
+            android:textColor="@color/coloBtnOper"
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -166,6 +168,7 @@
             android:layout_column="3"
             android:backgroundTint="@color/colorBtnPrimary"
             android:layout_margin="3dp"
+            android:textColor="@color/coloBtnOper"
             android:text="*"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -177,6 +180,7 @@
             android:layout_row="3"
             android:layout_column="0"
             android:backgroundTint="@color/colorBtnPrimary"
+            android:textColor="@color/coloBtnOper"
             android:text="+/-"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -198,6 +202,7 @@
             android:layout_column="2"
             android:backgroundTint="@color/colorBtnPrimary"
             android:layout_margin="3dp"
+            android:textColor="@color/coloBtnOper"
             android:text="."
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -208,6 +213,7 @@
             android:layout_column="3"
             android:backgroundTint="@color/colorBtnPrimary"
             android:layout_margin="3dp"
+            android:textColor="@color/coloBtnOper"
             android:text="/"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -222,6 +228,7 @@
             android:layout_margin="3dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="15dp"
+            android:textColor="@color/coloBtnOper"
             android:text="="
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -233,6 +240,7 @@
             android:layout_margin="3dp"
             android:backgroundTint="@color/colorClear"
             android:padding="15dp"
+            android:textColor="@color/coloBtnOper"
             android:text="C"
             android:textSize="20sp"
             android:textStyle="bold" />

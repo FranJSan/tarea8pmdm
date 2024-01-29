@@ -11,7 +11,7 @@
         android:id="@+id/linearLyt"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorBackMain"
+        android:background="@color/colorTb"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/fragmentContent"
@@ -32,6 +32,7 @@
                 android:backgroundTint="@color/colorBtnPrimary"
                 android:rotation="90"
                 android:text="Web"
+                android:textColor="@color/btnTextMain"
                 android:textSize="15sp" />
         </FrameLayout>
 
@@ -43,6 +44,7 @@
 
             <Button
                 android:id="@+id/btnCalculadora"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -50,6 +52,7 @@
                 android:padding="10sp"
                 android:rotation="90"
                 android:text="Calc"
+                android:textColor="@color/btnTextMain"
                 android:textSize="15dp" />
         </FrameLayout>
 

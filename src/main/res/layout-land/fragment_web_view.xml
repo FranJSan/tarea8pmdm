@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackMain"
+    android:background="@color/colorTb"
     tools:context=".WebViewFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
+        android:backgroundTint="@color/colorBtnPrimary"
+        android:textColorHint="@color/colorBtnPrimary"
         android:id="@+id/etUrl"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
         android:layout_margin="10dp"
         android:backgroundTint="@color/colorBtnPrimary"
         android:text="Ir"
+        android:textColor="@color/btnTextMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/etUrl"
         app:layout_constraintTop_toTopOf="parent"

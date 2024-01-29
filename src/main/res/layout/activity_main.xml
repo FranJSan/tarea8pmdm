@@ -17,10 +17,11 @@
 
 
         <TextView
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/white"
+            android:textColor="@color/btnTextMain"
             android:textSize="20sp" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -29,7 +30,7 @@
         android:id="@+id/linearLyt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBackMain"
+        android:background="@color/colorTb"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,18 +44,19 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorBtnPrimary"
-            android:text="WebView" />
+            android:text="WebView"
+            android:textColor="@color/btnTextMain" />
 
         <Button
             android:id="@+id/btnCalculadora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-
             android:layout_weight="1"
             android:backgroundTint="@color/colorBtnPrimary"
+            android:text="Calculadora"
 
-            android:text="Calculadora" />
+            android:textColor="@color/btnTextMain" />
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView

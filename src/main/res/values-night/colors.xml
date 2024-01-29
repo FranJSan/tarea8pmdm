@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="btnTextMain">#DFD5CC</color>
+    <color name="colorTb">#131833</color>
+    <color name="colorBackMain">#BD9766</color>
+    <color name="colorBtnPrimary">#7A2A30</color>
+    <color name="colorBtnNumbers">#3E4471</color>
+    <color name="colorBtnTextNumbers">#FFFFFF</color>
+    <color name="colorClear">#248375</color>
+    <color name="coloBtnOper">#F5F6FF</color>
+</resources>
