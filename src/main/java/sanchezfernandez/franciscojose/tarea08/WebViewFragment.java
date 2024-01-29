@@ -8,14 +8,17 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.net.MalformedURLException;
@@ -71,6 +74,18 @@ public class WebViewFragment extends Fragment {
         wv = view.findViewById(R.id.webView);
         etInput = view.findViewById(R.id.etUrl);
         etInput.requestFocus();
+        etInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if(actionId == EditorInfo.IME_ACTION_DONE
+                        || actionId == KeyEvent.ACTION_DOWN
+                        || actionId == KeyEvent.KEYCODE_ENTER) {
+                    btnClick(null);
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     /**
@@ -101,8 +116,9 @@ public class WebViewFragment extends Fragment {
      */
     private String getFormatUrl() {
         String urlInput = etInput.getText().toString();
+
         if (!urlInput.startsWith("http")) {
-            urlInput = "http://" + urlInput;
+            urlInput = "https://" + urlInput;
         }
         return urlInput;
     }
