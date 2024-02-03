@@ -2,18 +2,13 @@ package sanchezfernandez.franciscojose.tarea08;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-
 import java.util.logging.Logger;
 
 /**
@@ -24,9 +19,8 @@ import java.util.logging.Logger;
  *                        WebView.
  *  - Button 'Calculadora' -> El fragment contiene los botones necesarios y un TextView para realizar
  *                            operaciones básica y mostrar el resultado.
- *
  * La aplicación contiene layouts para modo land y port, almacenando información para mostrar el mismo
- * fragment en los cambio de estado.
+ * fragment en los cambio de estado y colores específicos para el modo día y noche del teléfono.
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -90,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método para guardar información sobre el fragment que se está mostrando para poder restaurarlo
-     * durante los cambios de estado.
+     * durante los cambios de estado. No se almacena ninguna información relativa al estado interno
+     * del fragment.
      * @param outState Bundle in which to place your saved state.
      *
      */
@@ -119,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método para mostrar el teclado al abrir el fragment del WebView.
-     *
      * NOTA -> Al implementar los cambios de estado y los diferentes layouts, este método empezó
      * a funcionar mal. Creo que tiene que ver con algún aspecto del ciclo de vida al restaurar la vista,
      * pero no he conseguido arreglarlo. Dejo el método porque no da errores y funciona en algunas ocasiones:
@@ -153,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
 
             }
-        } else {
+        } else { // si currentFragment es null muestro el fragment del webView
             transaction.replace(R.id.fragmentContent, webViewFragment, null);
             transaction.addToBackStack(null);
             transaction.commit();

@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 /**
  * Clase del fragment 'Calculadora'.
  * La clase contiene 3 variables para controlar el flujo de operaciones:
@@ -59,7 +61,7 @@ public class CalculadoraFragment extends Fragment {
      * @param savedInstanceState If non-null, this fragment is being re-constructed
      * from a previous saved state as given here.
      *
-     * @return
+     * @return view inflada
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,7 +104,7 @@ public class CalculadoraFragment extends Fragment {
 
         btnMasMenos = view.findViewById(R.id.btnMasMenos);
         btnMasMenos.setOnClickListener((v) -> {
-            String newResult = "";
+            String newResult;
             if (tvResult.getText().toString().startsWith("-")) {
                 newResult = tvResult.getText().toString().replace('-', ' ').trim();
             } else {
@@ -117,6 +119,8 @@ public class CalculadoraFragment extends Fragment {
                 tvResult.setText(newResult);
             }
         });
+
+        // Botones de operaciones
         btnMas = view.findViewById(R.id.btnMas);
         btnMas.setOnClickListener(this::clickBtnOperacion);
         btnMenos = view.findViewById(R.id.btnMenos);
@@ -132,7 +136,7 @@ public class CalculadoraFragment extends Fragment {
             borrarInputs = true;
         });
 
-
+        // Button Clear
         btnClear = view.findViewById(R.id.btnClear);
         btnClear.setOnClickListener((v) ->{
             operando = 0f;
@@ -160,7 +164,7 @@ public class CalculadoraFragment extends Fragment {
      */
     private void clickBtnOperacion(View v) {
         Button btn = (Button) v;
-        if (operacion != "") {
+        if (!Objects.equals(operacion, "")) {
             realizarOperacion();
             operacion = btn.getText().toString();
             tvResult.setText(String.valueOf(operando));

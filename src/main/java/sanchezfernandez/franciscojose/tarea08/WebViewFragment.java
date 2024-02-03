@@ -1,32 +1,22 @@
 package sanchezfernandez.franciscojose.tarea08;
 
-import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
-
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.net.MalformedURLException;
-import java.util.logging.Logger;
 
 /**
  * Clase del fragment WebView.
- * Esta clase contiene wl WebView que mostrará la Url que introduzca el usuario.
+ * Esta clase contiene el WebView que mostrará la Url que introduzca el usuario.
  * La clase contiene métodos para comprobar la valided de la URL solicitada.
  */
 public class WebViewFragment extends Fragment {
@@ -53,7 +43,7 @@ public class WebViewFragment extends Fragment {
      * @param savedInstanceState If non-null, this fragment is being re-constructed
      * from a previous saved state as given here.
      *
-     * @return
+     * @return view inflada
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,23 +64,25 @@ public class WebViewFragment extends Fragment {
         wv = view.findViewById(R.id.webView);
         etInput = view.findViewById(R.id.etUrl);
         etInput.requestFocus();
-        etInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_DONE
-                        || actionId == KeyEvent.ACTION_DOWN
-                        || actionId == KeyEvent.KEYCODE_ENTER) {
-                    btnClick(null);
-                    return true;
-                }
-                return false;
+        /*
+         * Sobreescribo el método onEditorAction para controlar la entrada del teclado virtutal y
+         * realizar la acción de la tecla 'ENTER', que simplemente acciona el controlador del evento
+         * click del button 'Ir'.
+         */
+        etInput.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+            if(actionId == EditorInfo.IME_ACTION_DONE
+                    || actionId == KeyEvent.ACTION_DOWN
+                    || actionId == KeyEvent.KEYCODE_ENTER) {
+                btnClick(null);
+                return true;
             }
+            return false;
         });
     }
 
     /**
      * Controlador del evento click del botón 'Ir'.
-     * @param v
+     * @param v button
      * @see #cargarWeb()
      */
     private void btnClick(View v) {
@@ -112,7 +104,7 @@ public class WebViewFragment extends Fragment {
 
     /**
      * Método que devuelve la Url introducida por el usuario con un formato válido.
-     * @return
+     * @return url con el formato verificado
      */
     private String getFormatUrl() {
         String urlInput = etInput.getText().toString();
@@ -126,8 +118,8 @@ public class WebViewFragment extends Fragment {
     /**
      * Método que comprueba a través de un Regex (sacado de internet, pero lo he revisado y probado)
      * la validez de la Url solicitada por el usuario.
-     * @param url
-     * @return
+     * @param url input del usuraio
+     * @return true si la url es válidad, false si no lo es
      */
     private boolean comprobarInput(String url) {
 
