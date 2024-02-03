@@ -44,7 +44,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorBtnPrimary"
-            android:text="WebView"
+            android:text="@string/btnWV"
             android:textColor="@color/btnTextMain" />
 
         <Button
@@ -54,7 +54,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorBtnPrimary"
-            android:text="Calculadora"
+            android:text="@string/btnCalculadora"
 
             android:textColor="@color/btnTextMain" />
     </LinearLayout>

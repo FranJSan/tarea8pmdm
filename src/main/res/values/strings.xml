@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">SÁNCHEZ FERNÁNDEZ 08</string>
+    <string name="app_name">SÁNCHEZFERNÁNDEZ 08</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Introduce la URL</string>
+    <string name="btnWV">WebView</string>
+    <string name="btnCalculadora">Calculadora</string>
+    <string name="btnWvLand">Web</string>
+    <string name="btnCaldLand">Calc</string>
+    <string name="btn7Calc">7</string>
+    <string name="btn8Calc">8</string>
+    <string name="btn9Calc">9</string>
+    <string name="btnMasCalc">+</string>
+    <string name="btn4Calc">4</string>
+    <string name="btn5Calc">5</string>
+    <string name="btn6Calc">6</string>
+    <string name="btnMenosCalc">-</string>
+    <string name="btn1Calc">1</string>
+    <string name="btn2Calc">2</string>
+    <string name="btn3Calc">3</string>
+    <string name="btnPorCalc">*</string>
+    <string name="btnMasMenosCalc">+/-</string>
+    <string name="btn0Calc">0</string>
+    <string name="btnPuntoCalc">.</string>
+    <string name="btnEntreCalc">/</string>
+    <string name="btnClearCalc">C</string>
+    <string name="btnIgualCalc">=</string>
 </resources>

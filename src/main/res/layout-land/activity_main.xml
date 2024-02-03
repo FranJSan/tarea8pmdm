@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/colorBtnPrimary"
                 android:rotation="90"
-                android:text="Web"
+                android:text="@string/btnWvLand"
                 android:textColor="@color/btnTextMain"
                 android:textSize="15sp" />
         </FrameLayout>
@@ -44,16 +44,15 @@
 
             <Button
                 android:id="@+id/btnCalculadora"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/colorBtnPrimary"
                 android:padding="10sp"
                 android:rotation="90"
-                android:text="Calc"
+                android:text="@string/btnCaldLand"
                 android:textColor="@color/btnTextMain"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
         </FrameLayout>
 
 

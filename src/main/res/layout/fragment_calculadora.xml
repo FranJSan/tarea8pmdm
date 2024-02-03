@@ -45,7 +45,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="7"
+            android:text="@string/btn7Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="8"
+            android:text="@string/btn8Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -69,7 +69,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="9"
+            android:text="@string/btn9Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -81,7 +81,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="+"
+            android:text="@string/btnMasCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -94,7 +94,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="4"
+            android:text="@string/btn4Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -106,7 +106,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="5"
+            android:text="@string/btn5Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -118,7 +118,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="6"
+            android:text="@string/btn6Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -130,7 +130,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="-"
+            android:text="@string/btnMenosCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -143,7 +143,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="1"
+            android:text="@string/btn1Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -155,7 +155,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="2"
+            android:text="@string/btn2Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -167,7 +167,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="3"
+            android:text="@string/btn3Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -179,7 +179,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="*"
+            android:text="@string/btnPorCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -192,7 +192,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="+/-"
+            android:text="@string/btnMasMenosCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -204,7 +204,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnNumbers"
             android:padding="20dp"
-            android:text="0"
+            android:text="@string/btn0Calc"
             android:textColor="@color/colorBtnTextNumbers"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -216,7 +216,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="."
+            android:text="@string/btnPuntoCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -228,7 +228,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="/"
+            android:text="@string/btnEntreCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -241,7 +241,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorClear"
             android:padding="20dp"
-            android:text="C"
+            android:text="@string/btnClearCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -255,7 +255,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/colorBtnPrimary"
             android:padding="20dp"
-            android:text="="
+            android:text="@string/btnIgualCalc"
             android:textColor="@color/coloBtnOper"
             android:textSize="25sp"
             android:textStyle="bold" />
